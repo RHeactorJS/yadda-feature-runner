@@ -1,0 +1,39 @@
+{
+  "name": "rheactor-yadda-feature-runner",
+  "description": "A feature runner for yadda",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/standard *.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "bin": {
+    "rheactor-yadda-feature-runner": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RHeactor/yadda-feature-runner.git"
+  },
+  "author": "Resourceful Humans <info@resourceful-humans.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RHeactor/yadda-feature-runner/issues"
+  },
+  "homepage": "https://github.com/RHeactor/yadda-feature-runner#readme",
+  "dependencies": {
+    "lodash": "^4.12.0",
+    "toposort": "^1.0.0",
+    "yadda": "^0.17.9"
+  },
+  "devDependencies": {
+    "ghooks": "^1.2.1",
+    "standard": "^7.1.0",
+    "validate-commit-msg": "^2.6.1",
+    "semantic-release": "^4.3.5"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run lint",
+      "commit-msg": "validate-commit-msg"
+    }
+  }
+}
