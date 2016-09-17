@@ -3,7 +3,7 @@
   "description": "A feature runner for yadda",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/standard *.js",
+    "lint": "standard *.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "bin": {
