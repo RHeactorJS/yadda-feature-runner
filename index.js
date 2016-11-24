@@ -19,7 +19,7 @@ function run (app, featureFiles, featureLibraries) {
   let featureGraph = _map(featureFiles, (f) => {
     let featureNameAndFile
     featureFile(f, (feature) => {
-      let name = f.match(/\/([^\/\.]+)\.feature$/)
+      let name = f.match(/\/([^/.]+)\.feature$/)
       featureNameAndFile = [feature.annotations.after, name[1]]
     })
     return featureNameAndFile
