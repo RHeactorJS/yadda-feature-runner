@@ -3,7 +3,7 @@
   "description": "A feature runner for yadda",
   "main": "index.js",
   "scripts": {
-    "lint": "standard *.js",
+    "lint": "standard",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "bin": {
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/ResourcefulHumans/rheactor-yadda-feature-runner#readme",
   "dependencies": {
+    "colors": "^1.1.2",
     "lodash": "^4.12.0",
     "toposort": "^1.0.0",
     "yadda": "^0.22.0"

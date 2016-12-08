@@ -9,3 +9,11 @@
 [![NPM](https://nodei.co/npm/rheactor-yadda-feature-runner.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/rheactor-yadda-feature-runner/)
 
 A feature runner for [yadda](https://github.com/acuminous/yadda)
+
+## Annotations
+
+The following annotations are implemented:
+
+ - `@after`: marks a feature to be run *after* another feature. Features are sorted to ensure that they run in the proper order. 
+ - `@pending`: marks a feature or scenario as skipped
+ - `@thisonly`: tells the runner to only run this feature. All depending features are run before. 
