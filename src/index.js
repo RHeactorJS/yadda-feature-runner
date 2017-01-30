@@ -1,21 +1,12 @@
-'use strict'
-
 /* global featureFile, scenarios, steps, before */
-
-const Yadda = require('yadda')
-const toposort = require('toposort')
-const _filter = require('lodash/filter')
-const _intersection = require('lodash/intersection')
-const _difference = require('lodash/difference')
-const _map = require('lodash/map')
+import Yadda from 'yadda'
+import toposort from 'toposort'
+import _filter from 'lodash/filter'
+import _intersection from 'lodash/intersection'
+import _difference from 'lodash/difference'
+import _map from 'lodash/map'
+import colors from 'colors'
 Yadda.plugins.mocha.StepLevelPlugin.init()
-const colors = require('colors')
-
-function importLibrary (stepdefs, stepdef) {
-  let fileName = stepdef.replace('.js', '')
-  let library = require(fileName)
-  return stepdefs.concat(library)
-}
 
 function run (app, featureFiles, featureLibraries) {
   const onlyFeatures = []
@@ -43,13 +34,12 @@ function run (app, featureFiles, featureLibraries) {
   let context = {
     $app: app
   }
-  let stepDefs = featureLibraries.reduce(importLibrary, [])
-  let y = new Yadda.Yadda(_map(stepDefs, (def) => {
+  let y = new Yadda.Yadda(_map(featureLibraries, (def) => {
     return def.library
   }), {
     ctx: context
   })
-  let beforeScenarioHooks = _filter(_map(stepDefs, (def) => {
+  let beforeScenarioHooks = _filter(_map(featureLibraries, (def) => {
     return def.beforeScenario
   }), (hook) => {
     return hook !== undefined
@@ -72,7 +62,7 @@ function run (app, featureFiles, featureLibraries) {
 
   _map(sortedFeatures, (featureName) => {
     let file = _filter(featureFiles, (file) => {
-      return new RegExp('/' + featureName + '.feature$').test(file)
+      return new RegExp(`/${featureName}.feature$`).test(file)
     })[0]
     featureFile(file, (feature) => {
       if (feature.annotations.pending) {
@@ -97,7 +87,7 @@ function run (app, featureFiles, featureLibraries) {
   })
 }
 
-module.exports = (app) => {
+export default (app) => {
   return {
     run: run.bind(null, app)
   }
