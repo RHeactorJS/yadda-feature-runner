@@ -9,7 +9,7 @@
     "commitmsg": "validate-commit-msg"
   },
   "bin": {
-    "rheactor-yadda-feature-runner": "./index.js"
+    "rheactor-yadda-feature-runner": "./dist/index.js"
   },
   "repository": {
     "type": "git",
