@@ -1,5 +1,5 @@
 {
-  "name": "rheactor-yadda-feature-runner",
+  "name": "@rheactorjs/yadda-feature-runner",
   "description": "A feature runner for yadda",
   "main": "dist/index.js",
   "scripts": {
@@ -9,18 +9,21 @@
     "commitmsg": "validate-commit-msg"
   },
   "bin": {
-    "rheactor-yadda-feature-runner": "./dist/index.js"
+    "yadda-feature-runner": "./dist/index.js"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ResourcefulHumans/rheactor-yadda-feature-runner.git"
+    "url": "https://github.com/RHeactorJS/yadda-feature-runner.git"
   },
   "author": "Resourceful Humans GmbH <info@resourceful-humans.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ResourcefulHumans/rheactor-yadda-feature-runner/issues"
+    "url": "https://github.com/RHeactorJS/yadda-feature-runner/issues"
   },
-  "homepage": "https://github.com/ResourcefulHumans/rheactor-yadda-feature-runner#readme",
+  "homepage": "https://github.com/RHeactorJS/yadda-feature-runner#readme",
   "dependencies": {
     "colors": "^1.1.2",
     "lodash": "^4.12.0",
