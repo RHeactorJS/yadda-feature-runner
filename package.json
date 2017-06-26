@@ -1,5 +1,6 @@
 {
   "name": "@rheactorjs/yadda-feature-runner",
+  "version": "0.0.0-development",
   "description": "A feature runner for yadda",
   "main": "dist/index.js",
   "scripts": {
@@ -45,5 +46,8 @@
     "dist",
     "src",
     "README.md"
-  ]
+  ],
+  "engines": {
+    "node": ">=6.10.2"
+  }
 }
