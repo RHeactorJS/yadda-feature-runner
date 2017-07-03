@@ -30,9 +30,6 @@
     "lodash": "^4.12.0",
     "toposort": "^1.0.0"
   },
-  "peerDependencies": {
-    "yadda": "^1.1.1"
-  },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-env": "^1.1.8",
@@ -40,7 +37,8 @@
     "husky": "^0.13.3-0",
     "standard": "^10.0.1",
     "validate-commit-msg": "^2.6.1",
-    "semantic-release": "^6.3.2"
+    "semantic-release": "^6.3.2",
+    "yadda": "^1.1.1"
   },
   "files": [
     "dist",
