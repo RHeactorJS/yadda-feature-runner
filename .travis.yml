@@ -5,9 +5,15 @@ cache:
 notifications:
   email: false
 node_js:
-  - 'stable'
-before_script:
-  - npm prune
+  - 'node'
+before_install:
+  - npm install -g npm@5
+  - npm install -g greenkeeper-lockfile@1
+install:
+  - npm install
+#  - npm prune // Broken because of https://github.com/npm/npm/issues/17781
+before_script: greenkeeper-lockfile-update
+after_script: greenkeeper-lockfile-upload
 script:
   - npm run lint
   - make dist
