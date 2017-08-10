@@ -1,5 +1,7 @@
 # yadda-feature-runner
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/RHeactorJS/yadda-feature-runner.svg)](https://greenkeeper.io/)
+
 [![npm version](https://img.shields.io/npm/v/@rheactorjs/yadda-feature-runner.svg)](https://www.npmjs.com/package/@rheactorjs/yadda-feature-runner)
 [![Build Status](https://travis-ci.org/RHeactorJS/yadda-feature-runner.svg?branch=master)](https://travis-ci.org/RHeactorJS/yadda-feature-runner)
 [![monitored by greenkeeper.io](https://img.shields.io/badge/greenkeeper.io-monitored-brightgreen.svg)](http://greenkeeper.io/) 
