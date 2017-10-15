@@ -11,7 +11,7 @@ before_install:
   - npm install -g greenkeeper-lockfile@1
 install:
   - npm install
-#  - npm prune // Broken because of https://github.com/npm/npm/issues/17781
+  - npm prune
 before_script: greenkeeper-lockfile-update
 after_script: greenkeeper-lockfile-upload
 script:
