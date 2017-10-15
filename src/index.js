@@ -1,4 +1,4 @@
-/* global featureFile, scenarios, steps, before */
+/* global featureFile scenarios steps beforeAll */
 import Yadda from 'yadda'
 import toposort from 'toposort'
 import _filter from 'lodash/filter'
@@ -70,7 +70,7 @@ function run (app, featureFiles, featureLibraries) {
         return
       }
       scenarios(feature.scenarios, (scenario) => {
-        before(() => {
+        beforeAll(() => {
           _map(beforeScenarioHooks, (hook) => {
             hook(context)
           })
