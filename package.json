@@ -7,7 +7,7 @@
     "lint": "standard",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "precommit": "npm run lint",
-    "commitmsg": "validate-commit-msg"
+    "commitmsg": "commitlint -e"
   },
   "bin": {
     "yadda-feature-runner": "./dist/index.js"
@@ -32,13 +32,14 @@
     "toposort": "^1.0.6"
   },
   "devDependencies": {
+    "@commitlint/cli": "^4.2.0",
+    "@commitlint/config-angular": "^4.2.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-es2015": "^6.18.0",
     "husky": "^0.14.3",
     "semantic-release": "^8.0.3",
     "standard": "^10.0.3",
-    "validate-commit-msg": "^2.14.0",
     "yadda": "^1.4.0"
   },
   "files": [
